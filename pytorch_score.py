@@ -1,6 +1,3 @@
-# Copyright (c) Microsoft. All rights reserved.
-# Licensed under the MIT license.
-
 import torch
 import torch.nn as nn
 from torchvision import transforms
@@ -36,7 +33,7 @@ def base64ToImg(base64ImgString):
 
 def init():
     global model
-    model_path = Model.get_model_path('dogs')
+    model_path = Model.get_model_path('myspecialmodel')
     model = torch.load(model_path, map_location=lambda storage, loc: storage)
     model.eval()
 
